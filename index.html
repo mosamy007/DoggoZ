@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoggoZ Official - Retro Pixel Art Collection</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="scanlines"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <h1>Doggo<span class="glitch">Z</span></h1>
+            <p class="subtitle">OFFICIAL PIXEL ART COLLECTION</p>
+        </div>
+        <nav class="nav">
+            <button class="nav-btn" onclick="scrollToSection('gallery')">GALLERY</button>
+            <button class="nav-btn" onclick="scrollToSection('about')">ABOUT</button>
+            <button class="nav-btn" onclick="scrollToSection('links')">LINKS</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2 class="hero-title">WELCOME TO THE DoggoZ</h2>
+            <p class="hero-subtitle">Where pixel art meets nostalgic 80s vibes</p>
+            <div class="hero-btns">
+                <button class="btn-primary" onclick="scrollToSection('gallery')">VIEW COLLECTION</button>
+                <button class="btn-secondary" onclick="scrollToSection('links')">JOIN COMMUNITY</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="pixel-border">
+                <img src="" alt="Featured DoggoZ Art" class="hero-art" style="opacity: 0;" onload="this.style.opacity = 1;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <h2 class="section-title">DOGGOZ SLIDESHOW</h2>
+        <!-- Slideshow will be created dynamically by JavaScript -->
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2 class="section-title">ABOUT DOGGOZ</h2>
+            <div class="about-text">
+                <p>DoggoZ is a unique pixel art collection that brings together nostalgic 80s retro aesthetics with the modern world of digital collectibles.</p>
+                <p>Each DoggoZ character is hand-crafted with attention to pixel-perfect detail, featuring vibrant colors and retro aesthetics that capture the essence of classic pixel art.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Links Section -->
+    <section id="links" class="links">
+        <h2 class="section-title">JOIN THE PACK</h2>
+        <div class="links-grid">
+            <a href="https://opensea.io/collection/doggoz-official" class="link-card opensea" target="_blank">
+                <div class="link-icon">🌊</div>
+                <h3>OpenSea</h3>
+                <p>View Collection</p>
+            </a>
+            <a href="https://magiceden.io/collections/base/DoggoZ" class="link-card magiceden" target="_blank">
+                <div class="link-icon">✨</div>
+                <h3>Magic Eden</h3>
+                <p>Secondary Marketplace</p>
+            </a>
+            <a href="https://x.com/doggoznfts" class="link-card twitter" target="_blank">
+                <div class="link-icon">🐦</div>
+                <h3>Twitter</h3>
+                <p>Follow Updates</p>
+            </a>
+            <a href="https://discord.gg/xdWrtU82hh" class="link-card discord" target="_blank">
+                <div class="link-icon">💬</div>
+                <h3>Discord</h3>
+                <p>Join Community</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 DoggoZ Official. All rights reserved.</p>
+        <p class="footer-subtitle">Built with 80s love and modern tech</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
