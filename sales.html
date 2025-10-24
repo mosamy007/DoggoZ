@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoggoZ Sales Activity - Retro Pixel Art Collection</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="config.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <h1>DoggoZ</h1>
+                <p class="tagline">Sales Activity</p>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">🏠 Home</a>
+                <a href="sales.html" class="nav-link active">📊 Sales</a>
+                <a href="#" class="nav-link">🐕 Collection</a>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <section class="hero-sales">
+                <h2 class="hero-title">Sales Activity Dashboard</h2>
+                <p class="hero-subtitle">Track the hottest DoggoZ sales and market trends</p>
+                <div class="sales-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">🔥</div>
+                        <div class="stat-content">
+                            <div class="stat-number" id="todayVolume">Loading...</div>
+                            <div class="stat-label">24h Volume</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">💎</div>
+                        <div class="stat-content">
+                            <div class="stat-number" id="todaySales">Loading...</div>
+                            <div class="stat-label">Sales Today</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">👑</div>
+                        <div class="stat-content">
+                            <div class="stat-number" id="uniqueBuyers">Loading...</div>
+                            <div class="stat-label">Active Buyers</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Sale Section -->
+            <section class="featured-sale">
+                <h3 class="section-title">🏆 Biggest Sale Today</h3>
+                <div class="featured-card" id="featuredSale">
+                    <div class="loading-spinner"></div>
+                    <p>Loading featured sale...</p>
+                </div>
+            </section>
+
+            <!-- Recent Sales -->
+            <section class="recent-sales">
+                <div class="section-header">
+                    <h3 class="section-title">Recent Sales Activity</h3>
+                    <button class="btn-secondary" onclick="refreshSalesData()">🔄 Refresh</button>
+                </div>
+                <div class="sales-grid" id="salesGrid">
+                    <div class="loading-spinner"></div>
+                    <p>Loading recent sales...</p>
+                </div>
+            </section>
+
+            <!-- Market Trends -->
+            <section class="market-trends">
+                <h3 class="section-title">📈 Market Trends</h3>
+                <div class="trends-grid">
+                    <div class="trend-card">
+                        <div class="trend-header">
+                            <span class="trend-icon">📊</span>
+                            <h4>Price Trend</h4>
+                        </div>
+                        <div class="trend-chart" id="priceTrend">
+                            <div class="chart-placeholder">Loading price data...</div>
+                        </div>
+                    </div>
+                    <div class="trend-card">
+                        <div class="trend-header">
+                            <span class="trend-icon">🏷️</span>
+                            <h4>Volume Trend</h4>
+                        </div>
+                        <div class="trend-chart" id="volumeTrend">
+                            <div class="chart-placeholder">Loading volume data...</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="#" class="footer-link">📱 Twitter</a>
+                    <a href="#" class="footer-link">💬 Discord</a>
+                    <a href="#" class="footer-link">🔗 OpenSea</a>
+                    <a href="#" class="footer-link">🏪 Magic Eden</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2024 DoggoZ Official. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="sales.js"></script>
+</body>
+</html>
