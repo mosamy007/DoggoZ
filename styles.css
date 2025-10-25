@@ -926,7 +926,6 @@ body {
 @media (max-width: 480px) {
     .header {
         padding: 0.8rem 0.5rem;
-        top: 25px; /* Account for bigger stripes */
     }
     
     .logo h1 {
