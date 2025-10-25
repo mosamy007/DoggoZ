@@ -279,6 +279,20 @@ async function createSlidesFromNFTs(nfts, wrapper, indicatorsContainer) {
     nfts.forEach((nftData, index) => {
         const slide = document.createElement('div');
         slide.className = `slide${index === 0 ? ' active' : ''}`;
+        
+        // Create UNIQUE OpenSea link for THIS specific NFT using its tokenId
+        const openseaUrl = `https://opensea.io/assets/base/${NFT_CONFIG.collection.contractAddress}/${nftData.tokenId}`;
+        
+        console.log(`NFT #${nftData.tokenId} will link to: ${openseaUrl}`);
+        
+        // Make slide clickable with the CORRECT URL for this NFT
+        slide.style.cursor = 'pointer';
+        slide.setAttribute('data-opensea-url', openseaUrl); // Store URL in data attribute
+        slide.onclick = function() {
+            const url = this.getAttribute('data-opensea-url');
+            console.log(`Opening OpenSea for NFT: ${url}`);
+            window.open(url, '_blank');
+        };
 
         const img = document.createElement('img');
         img.src = nftData.image.src;
@@ -293,6 +307,7 @@ async function createSlidesFromNFTs(nfts, wrapper, indicatorsContainer) {
             <div class="nft-info">
                 <h3 class="nft-title">${nftData.title}</h3>
                 <p class="nft-token-id">Token ID: ${nftData.tokenId}</p>
+                <p class="nft-click-hint">🌊 Click to view on OpenSea</p>
             </div>
         `;
 
@@ -302,8 +317,11 @@ async function createSlidesFromNFTs(nfts, wrapper, indicatorsContainer) {
 
         const indicator = document.createElement('span');
         indicator.className = `indicator${index === 0 ? ' active' : ''}`;
-        indicator.onclick = () => goToSlide(index);
-        indicator.title = nftData.title;
+        indicator.onclick = (e) => {
+            e.stopPropagation(); // Prevent triggering slide click
+            goToSlide(index);
+        };
+        indicator.title = `${nftData.title} - Click slide to view on OpenSea`;
         indicatorsContainer.appendChild(indicator);
     });
 

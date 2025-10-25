@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DoggoZ Official - Retro Pixel Art Collection</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,14 +33,25 @@
         </nav>
     </header>
 
+    <!-- Quick Links Bar -->
+    <section class="quick-links-bar">
+        <div class="quick-links-content">
+            <span class="quick-links-label">JOIN THE PACK:</span>
+            <a href="https://opensea.io/collection/doggoz-official" target="_blank" class="quick-link">🌊 OpenSea</a>
+            <a href="https://magiceden.io/collections/base/DoggoZ" target="_blank" class="quick-link">✨ Magic Eden</a>
+            <a href="https://x.com/doggoznfts" target="_blank" class="quick-link">🐦 Twitter</a>
+            <a href="https://discord.gg/xdWrtU82hh" target="_blank" class="quick-link">💬 Discord</a>
+        </div>
+    </section>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <h2 class="hero-title">WELCOME TO THE DoggoZ</h2>
             <p class="hero-subtitle">Where pixel art meets nostalgic 80s vibes</p>
             <div class="hero-btns">
-                <button class="btn-primary" onclick="scrollToSection('gallery')">VIEW COLLECTION</button>
-                <button class="btn-secondary" onclick="scrollToSection('links')">JOIN COMMUNITY</button>
+                <button class="btn-primary" onclick="scrollToSection('sales-preview')">VIEW SALES</button>
+                <button class="btn-secondary" onclick="scrollToSection('gallery')">VIEW COLLECTION</button>
             </div>
         </div>
         <div class="hero-image">
@@ -44,9 +61,55 @@
         </div>
     </section>
 
+    <!-- Sales Preview Section -->
+    <section id="sales-preview" class="sales-preview-section">
+        <h2 class="section-title">📊 SALES ACTIVITY</h2>
+        
+        <!-- Stats Cards -->
+        <div class="sales-stats-preview">
+            <div class="stat-card">
+                <div class="stat-icon">🔥</div>
+                <div class="stat-content">
+                    <div class="stat-number" id="previewVolume">Loading...</div>
+                    <div class="stat-label">24h Volume</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">💎</div>
+                <div class="stat-content">
+                    <div class="stat-number" id="previewSales">Loading...</div>
+                    <div class="stat-label">Sales Today</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">👑</div>
+                <div class="stat-content">
+                    <div class="stat-number" id="previewBuyers">Loading...</div>
+                    <div class="stat-label">Active Buyers</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Biggest Sale Preview -->
+        <div class="biggest-sale-preview">
+            <h3 class="subsection-title">🏆 Biggest Sale Today</h3>
+            <div id="biggestSalePreview" class="biggest-sale-card">
+                <div class="loading-spinner"></div>
+                <p>Loading featured sale...</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="sales.html" class="btn-primary">View Full Sales Dashboard →</a>
+        </div>
+    </section>
+
     <!-- Gallery Section -->
     <section id="gallery" class="gallery">
-        <h2 class="section-title">DOGGOZ SLIDESHOW</h2>
+        <div class="gallery-header">
+            <h2 class="section-title">🎨 DOGGOZ COLLECTION</h2>
+            <p class="gallery-description">Explore our unique pixel art NFTs. Click any NFT to view on OpenSea!</p>
+        </div>
         <!-- Slideshow will be created dynamically by JavaScript -->
     </section>
 
@@ -90,10 +153,11 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2024 DoggoZ Official. All rights reserved.</p>
-        <p class="footer-subtitle">Built with 80s love and modern tech</p>
+        <p>&copy; 2025 DoggoZ Official. All rights reserved.</p>
+        <p class="footer-subtitle">Built with 80s love</p>
     </footer>
 
     <script src="script.js"></script>
+    <script src="home-sales-preview.js"></script>
 </body>
 </html>
