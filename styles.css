@@ -863,7 +863,10 @@ main {
     }
     
     .logo h1 {
-        font-size: 1rem;
+        font-size: 1.2rem;
+            text-shadow: 
+        2px 2px 0px var(--primary-color),
+        4px 4px 0px rgba(0, 0, 0, 0.5);
     }
     
     .nav-btn {
@@ -880,6 +883,9 @@ main {
     .hero-title {
         font-size: 1.2rem;
         line-height: 1.1;
+            text-shadow: 
+        2px 2px 0px var(--primary-color),
+        4px 4px 0px rgba(0, 0, 0, 0.5);
     }
     
     .hero-subtitle {
