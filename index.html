@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DoggoZ Official</title>
+    <title>DoggoZ Official - Retro Pixel Art Collection</title>
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="DoggoZ" />
+    <link rel="manifest" href="/site.webmanifest" />
     
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,8 +19,6 @@
     <script src="config.js"></script>
 </head>
 <body>
-    <div class="scanlines"></div>
-
     <!-- Header -->
     <header class="header">
         <div class="logo">
@@ -27,30 +27,31 @@
         </div>
         <nav class="nav">
             <button class="nav-btn" onclick="scrollToSection('gallery')">GALLERY</button>
+            <a href="sales.html" class="nav-btn" style="text-decoration: none;">SALES</a>
             <button class="nav-btn" onclick="scrollToSection('about')">ABOUT</button>
-            <a href="sales.html" class="nav-btn">📊 SALES</a>
             <button class="nav-btn" onclick="scrollToSection('links')">LINKS</button>
         </nav>
     </header>
 
     <!-- Quick Links Bar -->
     <section class="quick-links-bar">
+                    <span class="quick-links-label">JOIN THE PACK:</span>
         <div class="quick-links-content">
-            <span class="quick-links-label">JOIN THE PACK:</span>
             <a href="https://opensea.io/collection/doggoz-official" target="_blank" class="quick-link">🌊 OpenSea</a>
             <a href="https://magiceden.io/collections/base/DoggoZ" target="_blank" class="quick-link">✨ Magic Eden</a>
-            <a href="https://x.com/doggoznfts" target="_blank" class="quick-link">𝕏</a>
+            <a href="https://x.com/doggoznfts" target="_blank" class="quick-link">𝕏 X</a>
             <a href="https://discord.gg/xdWrtU82hh" target="_blank" class="quick-link">💬 Discord</a>
         </div>
     </section>
 
+    <main>
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h2 class="hero-title">WELCOME TO THE DoggoZ</h2>
-            <p class="hero-subtitle">8,888 DoggoZ Vibing On Base</p>
+            <h2 class="hero-title">WELCOME TO DoggoZ</h2>
+            <p class="hero-subtitle">A Pack Of 8,888 DoggoZ Vibing On Base</p>
             <div class="hero-btns">
-                <button class="btn-primary" onclick="scrollToSection('sales-preview')">VIEW SALES</button>
+                <button class="btn-primary" onclick="scrollToSection('sales')">VIEW SALES</button>
                 <button class="btn-secondary" onclick="scrollToSection('gallery')">VIEW COLLECTION</button>
             </div>
         </div>
@@ -62,7 +63,7 @@
     </section>
 
     <!-- Sales Preview Section -->
-    <section id="sales-preview" class="sales-preview-section">
+    <section id="sales" class="sales-preview-section">
         <h2 class="section-title">📊 SALES ACTIVITY</h2>
         
         <!-- Stats Cards -->
@@ -85,7 +86,7 @@
                 <div class="stat-icon">👑</div>
                 <div class="stat-content">
                     <div class="stat-number" id="previewBuyers">Loading...</div>
-                    <div class="stat-label">Active Buyers</div>
+                    <div class="stat-label">Holders</div>
                 </div>
             </div>
         </div>
@@ -97,18 +98,16 @@
                 <div class="loading-spinner"></div>
                 <p>Loading featured sale...</p>
             </div>
-        </div>
-
-        <div style="text-align: center; margin-top: 2rem;">
-            <a href="sales.html" class="btn-primary">View Full Sales Dashboard →</a>
+        <a href="sales.html" class="btn-primary" style="text-decoration: none; border-color: aliceblue;">VIEW FULL SALES PAGE</a>
         </div>
     </section>
+    
 
     <!-- Gallery Section -->
     <section id="gallery" class="gallery">
         <div class="gallery-header">
             <h2 class="section-title">🎨 DOGGOZ COLLECTION</h2>
-            <p class="gallery-description">Explore our unique pixel art NFTs. Click any NFT to view on OpenSea!</p>
+            <p class="gallery-description">Explore our DoggoZ NFTs.</p>
         </div>
         <!-- Slideshow will be created dynamically by JavaScript -->
     </section>
@@ -118,7 +117,7 @@
         <div class="about-content">
             <h2 class="section-title">ABOUT DOGGOZ</h2>
             <div class="about-text">
-                <p>DoggoZ is a unique pixel art collection that brings together nostalgic 80s retro aesthetics with the modern world of digital collectibles.</p>
+                <p>DoggoZ is a unique pixel art collection that brings together nostalgic retro aesthetics with the modern world of digital collectibles.</p>
                 <p>Each DoggoZ character is hand-crafted with attention to pixel-perfect detail, featuring vibrant colors and retro aesthetics that capture the essence of classic pixel art.</p>
             </div>
         </div>
@@ -128,28 +127,29 @@
     <section id="links" class="links">
         <h2 class="section-title">JOIN THE PACK</h2>
         <div class="links-grid">
-            <a href="https://opensea.io/collection/doggoz-official" class="link-card opensea" target="_blank">
+            <a href="https://opensea.io/collection/doggoz-official" class="link-card" target="_blank">
                 <div class="link-icon">🌊</div>
                 <h3>OpenSea</h3>
                 <p>View Collection</p>
             </a>
-            <a href="https://magiceden.io/collections/base/DoggoZ" class="link-card magiceden" target="_blank">
+            <a href="https://magiceden.io/collections/base/DoggoZ" class="link-card" target="_blank">
                 <div class="link-icon">✨</div>
                 <h3>Magic Eden</h3>
                 <p>Secondary Marketplace</p>
             </a>
-            <a href="https://x.com/doggoznfts" class="link-card twitter" target="_blank">
+            <a href="https://x.com/doggoznfts" class="link-card" target="_blank">
                 <div class="link-icon">𝕏</div>
-                <h3>Join us</h3>
+                <h3>X</h3>
                 <p>Follow Updates</p>
             </a>
-            <a href="https://discord.gg/xdWrtU82hh" class="link-card discord" target="_blank">
+            <a href="https://discord.gg/xdWrtU82hh" class="link-card" target="_blank">
                 <div class="link-icon">💬</div>
                 <h3>Discord</h3>
                 <p>Join Community</p>
             </a>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">

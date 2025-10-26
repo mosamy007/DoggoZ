@@ -178,21 +178,14 @@ function showErrorState(message) {
 }
 
 function updateStatsCards(stats, sales) {
-    const now = new Date();
-    const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-    
-    const todaySales = sales.filter(sale => sale.timestamp >= todayStart);
-    const todayVolume = todaySales.reduce((sum, sale) => sum + sale.price, 0);
-    const uniqueBuyers = new Set(todaySales.map(sale => sale.buyer).filter(b => b !== 'Unknown')).size;
-    
+    // Use actual API data for stats - no manual calculation
     document.getElementById('todayVolume').textContent = 
-        todayVolume > 0 ? `${todayVolume.toFixed(4)} ETH` : `${stats.oneDayVolume.toFixed(4)} ETH`;
+        `${stats.oneDayVolume.toFixed(4)} ETH`;
     
-    document.getElementById('todaySales').textContent = 
-        todaySales.length > 0 ? todaySales.length : stats.oneDaySales;
+    document.getElementById('todaySales').textContent = stats.oneDaySales;
     
-    document.getElementById('uniqueBuyers').textContent = 
-        uniqueBuyers > 0 ? uniqueBuyers : stats.numOwners;
+    // Use numOwners which is the actual holder/owner count from OpenSea
+    document.getElementById('uniqueBuyers').textContent = stats.numOwners;
     
     animateStatsCards();
 }
@@ -768,8 +761,8 @@ style.textContent = `
         }
         
         .featured-image {
-            width: 100%;
-            max-width: 200px;
+            width: 120px;
+            height: 120px;
             margin: 0 auto;
         }
         
